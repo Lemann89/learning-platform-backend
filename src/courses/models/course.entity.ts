@@ -15,7 +15,7 @@ import { ModuleEntity } from './module.entity';
 export class CourseEntity {
   @Field((type) => Int)
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Field()
   @Column()
@@ -28,9 +28,9 @@ export class CourseEntity {
   @Field()
   @OneToOne(() => CourseCategoryEntity)
   @JoinColumn({ name: 'category_id' })
-  courseCategory: CourseCategoryEntity;
+  courseCategory?: CourseCategoryEntity;
 
   @Field(() => [ModuleEntity])
   @OneToMany(() => ModuleEntity, (module) => module.course)
-  modules: ModuleEntity[];
+  modules?: ModuleEntity[];
 }

@@ -15,15 +15,15 @@ import { LessonEntity } from './lesson.entity';
 export class ModuleEntity {
   @Field((type) => Int)
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Field()
   @Column()
   name: string;
 
-  @Field((type) => Int)
+  @Field((type) => Int, { nullable: true })
   @Column()
-  order: number;
+  order?: number;
 
   @Field()
   @Column()
@@ -36,5 +36,5 @@ export class ModuleEntity {
 
   @Field(() => [LessonEntity])
   @OneToMany(() => LessonEntity, (lesson) => lesson.module)
-  lessons: LessonEntity[];
+  lessons?: LessonEntity[];
 }

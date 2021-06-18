@@ -13,11 +13,11 @@ import { ModuleEntity } from './module.entity';
 export class LessonEntity {
   @Field((type) => Int)
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
-  @Field((type) => Int)
+  @Field((type) => Int, { nullable: true })
   @Column()
-  order: number;
+  order?: number;
 
   @Field()
   @Column()
