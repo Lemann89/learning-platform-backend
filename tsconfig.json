@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
+    "devtool": "source-map",
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true
