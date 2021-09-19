@@ -28,10 +28,14 @@ export class CoursesService {
   create(courseInput: CreateCourseInput): Promise<CourseEntity> {
     const newCourse: CourseEntity = {
       ...courseInput,
-      courseCategory: {
-        id: courseInput.courseCategoryId,
-      } as CourseCategoryEntity,
+      courseCategory: null,
     };
+
+    if (courseInput.courseCategoryId) {
+      newCourse.courseCategory = {
+        id: courseInput.courseCategoryId,
+      } as CourseCategoryEntity;
+    }
 
     return this.coursesRepository.save(
       this.coursesRepository.create(newCourse),
