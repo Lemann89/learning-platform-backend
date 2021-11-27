@@ -7,8 +7,8 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { CourseEntity } from './course.entity';
-import { LessonEntity } from './lesson.entity';
+import { CourseEntity } from '../course/course.entity';
+import { LessonEntity } from '../lesson/lesson.entity';
 
 @ObjectType()
 @Entity('module')

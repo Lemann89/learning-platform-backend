@@ -7,8 +7,8 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { CourseCategoryEntity } from './course-category.entity';
-import { ModuleEntity } from './module.entity';
+import { CourseCategoryEntity } from '../course_category/course-category.entity';
+import { ModuleEntity } from '../module/module.entity';
 
 @ObjectType()
 @Entity('course')

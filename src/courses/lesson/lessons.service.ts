@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { LessonEntity } from '../models/lesson.entity';
-import { ModuleEntity } from '../models/module.entity';
-import { CreateLessonInput } from '../dto/lesson/create-lesson.input';
-import { UpdateLessonInput } from '../dto/lesson/update-lesson.input';
+import { LessonEntity } from './lesson.entity';
+import { ModuleEntity } from '../module/module.entity';
+import { CreateLessonInput } from './dto/create-lesson.input';
+import { UpdateLessonInput } from './dto/update-lesson.input';
 
 @Injectable()
 export class LessonsService {

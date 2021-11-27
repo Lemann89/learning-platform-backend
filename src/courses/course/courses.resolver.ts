@@ -1,10 +1,10 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { CourseEntity } from '../models/course.entity';
-import { CoursesService } from '../services/courses.service';
-import { CreateCourseInput } from '../dto/course/create-course.input';
-import { UpdateCourseInput } from '../dto/course/update-course.input';
+import { CourseEntity } from './course.entity';
+import { CoursesService } from './courses.service';
+import { CreateCourseInput } from './dto/create-course.input';
+import { UpdateCourseInput } from './dto/update-course.input';
 import { DeleteResult } from '../dto/delete-result';
-import { ModuleEntity } from '../models/module.entity';
+import { ModuleEntity } from '../module/module.entity';
 
 @Resolver(() => CourseEntity)
 export class CoursesResolver {

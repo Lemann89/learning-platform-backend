@@ -1,8 +1,8 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { ModuleEntity } from '../models/module.entity';
-import { ModulesService } from '../services/modules.service';
-import { CreateModuleInput } from '../dto/module/create-module.input';
-import { UpdateModuleInput } from '../dto/module/update-module.input';
+import { ModuleEntity } from './module.entity';
+import { ModulesService } from './modules.service';
+import { CreateModuleInput } from './dto/create-module.input';
+import { UpdateModuleInput } from './dto/update-module.input';
 import { DeleteResult } from '../dto/delete-result';
 
 @Resolver(() => ModuleEntity)
